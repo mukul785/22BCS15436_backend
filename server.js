@@ -7,10 +7,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(json());
-app.use(cors({
-    origin: ['https://22bcs15436-front.vercel.app'], 
-    methods: ['GET', 'POST'],
-}));
+const corsOptions = {
+    origin: 'https://22bcs15436-front.vercel.app',
+    methods: ['GET', 'POST'], 
+    allowedHeaders: ['Content-Type'], 
+};
+
+app.use(cors(corsOptions));
+
 
 app.post('/bfhl', (req, res) => {
     const inputArray = req.body.data;
