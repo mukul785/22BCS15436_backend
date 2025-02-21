@@ -12,7 +12,7 @@ app.use(cors({
     methods: ['GET', 'POST'],
 }));
 
-app.post('bfhl', (req, res) => {
+app.post('/bfhl', (req, res) => {
     const inputArray = req.body.data;
 
     if (!inputArray || !Array.isArray(inputArray)) {
@@ -53,7 +53,7 @@ app.post('bfhl', (req, res) => {
     res.json(response);
 });
 
-app.get('bfhl', (req, res) => {
+app.get('/bfhl', (req, res) => {
     res.json({ operation_code: 1 });
 });
 
