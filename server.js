@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(json());
 const corsOptions = {
-    origin: 'https://22bcs15436-front.vercel.app',
+    origin: 'https://22bcs15436api.netlify.app',
     methods: ['GET', 'POST'], 
     allowedHeaders: ['Content-Type'], 
 };
